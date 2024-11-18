@@ -4,7 +4,7 @@ extends Node
 
 signal leveled_up
 
-var _cost : Array[int] = [100, 300, 500, 1000]
+var _cost : Array[int] = [50, 250, 500, 1000]
 var _bonus : Array[float] = [
 	float(0.5),
 	float(0.75),

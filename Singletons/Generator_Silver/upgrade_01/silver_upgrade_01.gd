@@ -4,7 +4,7 @@ extends Node
 
 signal leveled_up
 
-var _cost : Array[int] = [100, 250, 450]
+var _cost : Array[int] = [50, 150, 250]
 var _bonus : Array[Vector2i] = [
 	Vector2i(1, 2),
 	Vector2i(7, 10),
