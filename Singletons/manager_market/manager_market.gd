@@ -20,6 +20,11 @@ func _ready() -> void:
 func get_exchange_rate_silver_to_logs() -> int:
 	return exchange_rate_silver_to_logs
 
+func get_received_logs_preview(amount: int) -> int:
+	var received_logs_preview: int = amount
+	received_logs_preview = amount / exchange_rate_silver_to_logs
+	return received_logs_preview
+
 func trade_silver_for_logs(amount: int) -> int:
 	var traded_logs: int = amount
 	traded_logs = amount / exchange_rate_silver_to_logs

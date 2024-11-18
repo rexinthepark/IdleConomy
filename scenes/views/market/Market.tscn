@@ -60,7 +60,8 @@ text = "Exchange Rate: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label_Logs" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label_ReceiveLogs" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Receive in Logs:"
 horizontal_alignment = 1
