@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b32o6cjo6lync"]
+
+[ext_resource type="Script" path="res://Singletons/manager_quest/tuto_quests/tuto_quest_01/tuto_quest_01.gd" id="1_omtcm"]
+
+[node name="TutoQuest01" type="Node"]
+script = ExtResource("1_omtcm")

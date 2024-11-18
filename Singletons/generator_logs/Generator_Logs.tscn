@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk46pkwnwnnjh"]
+
+[ext_resource type="PackedScene" uid="uid://bswuwg5qmjut7" path="res://Singletons/generator_logs/upgrade_01/logs_upgrade_01.tscn" id="1_3i48e"]
+[ext_resource type="Script" path="res://Singletons/generator_logs/generator_logs.gd" id="1_3qxd3"]
+[ext_resource type="PackedScene" uid="uid://brw5vpu5uvslf" path="res://Singletons/generator_logs/upgrade_02/logs_upgrade_02.tscn" id="2_o52us"]
+
+[node name="GeneratorLogs" type="Node"]
+script = ExtResource("1_3qxd3")
+
+[node name="LogsUpgrade01" parent="." instance=ExtResource("1_3i48e")]
+
+[node name="LogsUpgrade02" parent="." instance=ExtResource("2_o52us")]
+
+[node name="Timer" type="Timer" parent="."]

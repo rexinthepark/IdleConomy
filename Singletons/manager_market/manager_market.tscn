@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxxbut77qip20"]
+
+[ext_resource type="Script" path="res://Singletons/manager_market/manager_market.gd" id="1_y8f0h"]
+
+[node name="ManagerMarket" type="Node"]
+script = ExtResource("1_y8f0h")

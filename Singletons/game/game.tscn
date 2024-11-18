@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://e25hxoppbtic"]
+
+[ext_resource type="PackedScene" uid="uid://sw2dow8waobu" path="res://Singletons/manager_silver/manager_silver.tscn" id="1_girxv"]
+[ext_resource type="Script" path="res://Singletons/game/game.gd" id="1_gtil6"]
+[ext_resource type="PackedScene" uid="uid://df80n5nonft43" path="res://Singletons/Generator_Silver/Generator_Silver.tscn" id="2_t2up0"]
+[ext_resource type="PackedScene" uid="uid://csvv0n3tlhp7w" path="res://scenes/user_interface/user_interface.tscn" id="3_q7teu"]
+[ext_resource type="PackedScene" uid="uid://d2b8va745eegm" path="res://Singletons/manager_logs/manager_logs.tscn" id="4_0kisd"]
+[ext_resource type="PackedScene" uid="uid://xeqfxqxuk852" path="res://Singletons/manager_quest/manager_quest.tscn" id="4_jdbs2"]
+[ext_resource type="PackedScene" uid="uid://dk46pkwnwnnjh" path="res://Singletons/generator_logs/Generator_Logs.tscn" id="5_5hobh"]
+[ext_resource type="PackedScene" uid="uid://bxxbut77qip20" path="res://Singletons/manager_market/manager_market.tscn" id="5_cnjli"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_gtil6")
+
+[node name="SaveTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Currencies" type="Node" parent="."]
+
+[node name="ManagerSilver" parent="Currencies" instance=ExtResource("1_girxv")]
+
+[node name="ManagerLogs" parent="Currencies" instance=ExtResource("4_0kisd")]
+
+[node name="ManagerQuest" parent="." instance=ExtResource("4_jdbs2")]
+
+[node name="ManagerMarket" parent="." instance=ExtResource("5_cnjli")]
+
+[node name="Generators" type="Node" parent="."]
+
+[node name="GeneratorSilver" parent="Generators" instance=ExtResource("2_t2up0")]
+
+[node name="GeneratorLogs" parent="Generators" instance=ExtResource("5_5hobh")]
+
+[node name="UserInterface" parent="." instance=ExtResource("3_q7teu")]
+unique_name_in_owner = true

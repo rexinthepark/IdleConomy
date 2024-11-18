@@ -1,0 +1,224 @@
+[gd_scene load_steps=12 format=3 uid="uid://gwoml6sadnu8"]
+
+[ext_resource type="PackedScene" uid="uid://bofeqkjxlkvu4" path="res://components/button_generator_toggle/generator_silver_toggle_button.tscn" id="1_20mnm"]
+[ext_resource type="Script" path="res://scenes/views/village/icon_trading.gd" id="2_4oo2k"]
+[ext_resource type="Texture2D" uid="uid://d3s6842pty8vf" path="res://assets/icons/progress-bar-circle.png" id="2_laxne"]
+[ext_resource type="Texture2D" uid="uid://lmevqkoq24k" path="res://assets/icons/IconTrading.png" id="2_lpe1u"]
+[ext_resource type="Script" path="res://scenes/views/village/upgrade_silver_visibility_toggle_button.gd" id="2_oqous"]
+[ext_resource type="Script" path="res://assets/icons/icon_trading_progress_bar.gd" id="3_5lbwx"]
+[ext_resource type="Script" path="res://scenes/views/village/generator_silver_upgrade_01.gd" id="3_hj6ci"]
+[ext_resource type="Script" path="res://scenes/views/village/generator_silver_upgrade_02.gd" id="4_mrd8m"]
+[ext_resource type="PackedScene" uid="uid://usqp1wthk1n1" path="res://scenes/views/village/generators/GeneratorLogs.tscn" id="9_qo2wh"]
+[ext_resource type="Theme" uid="uid://p2xvtp58rkb6" path="res://assets/styles/theme/default_theme.tres" id="10_hi862"]
+[ext_resource type="PackedScene" uid="uid://b40xouuga2fvq" path="res://components/debug_box/debug_box.tscn" id="11_ihdke"]
+
+[node name="Village" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/Title"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label_Village" type="Label" parent="MarginContainer/VBoxContainer/Title/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Village
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxTrading" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxTrading" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxTradingGenerator" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Trading Common Goods
+"
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "The town is full of trading opportunities.
+Trade items to gain some Silver."
+
+[node name="IconTrading" type="TextureRect" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_lpe1u")
+expand_mode = 2
+script = ExtResource("2_4oo2k")
+
+[node name="IconTradingProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer/IconTrading"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 7.5
+offset_right = 53.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+value = 1.0
+fill_mode = 4
+texture_under = ExtResource("2_laxne")
+texture_progress = ExtResource("2_laxne")
+tint_under = Color(0.113725, 0.113725, 0.113725, 0.521569)
+tint_progress = Color(0, 1, 0, 1)
+script = ExtResource("3_5lbwx")
+
+[node name="GeneratorSilverToggleButton" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer" instance=ExtResource("1_20mnm")]
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="UpgradeVisibilityToggleButton" type="Button" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/VBoxTradingGenerator/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "+"
+script = ExtResource("2_oqous")
+
+[node name="HBoxTradingUpgrades" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Upgrade01" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades"]
+layout_mode = 2
+script = ExtResource("3_hj6ci")
+
+[node name="Description" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade01"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade01/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Upgrade 01
+"
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade01/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Here is some space to describe what the upgrade is doing."
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade01"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Upgrade02" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades"]
+layout_mode = 2
+script = ExtResource("4_mrd8m")
+
+[node name="Description" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade02"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade02/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Upgrade 02
+"
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade02/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Here is some space to describe what the upgrade is doing."
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Content/HBoxTrading/VBoxTrading/HBoxTradingUpgrades/Upgrade02"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="GeneratorLogs" parent="MarginContainer/VBoxContainer/Content" instance=ExtResource("9_qo2wh")]
+layout_mode = 2
+
+[node name="HBoxFuture" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/Content/HBoxFuture"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("10_hi862")
+
+[node name="Label_Future" type="Label" parent="MarginContainer/VBoxContainer/Content/HBoxFuture/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Future Content"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DebugBox" parent="MarginContainer/VBoxContainer/Content/HBoxFuture/Panel" instance=ExtResource("11_ihdke")]
+layout_mode = 1
+anchors_preset = 9
+anchor_right = 0.0
+offset_right = 320.0
+grow_horizontal = 1

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5i2p46037hhh"]
+
+[ext_resource type="Script" path="res://Singletons/manager_quest/quests/quest_02/quest_02.gd" id="1_1ndxx"]
+
+[node name="Quest02" type="Node"]
+script = ExtResource("1_1ndxx")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://sw2dow8waobu"]
+
+[ext_resource type="Script" path="res://Singletons/manager_silver/manager_silver.gd" id="1_t2cmp"]
+
+[node name="ManagerSilver" type="Node"]
+script = ExtResource("1_t2cmp")

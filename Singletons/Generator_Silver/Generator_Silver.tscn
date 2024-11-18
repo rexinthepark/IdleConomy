@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://df80n5nonft43"]
+
+[ext_resource type="Script" path="res://Singletons/Generator_Silver/Generator_Silver.gd" id="1_4msdt"]
+[ext_resource type="PackedScene" uid="uid://dv1pgwdfwn8te" path="res://Singletons/Generator_Silver/upgrade_01/silver_upgrade_01.tscn" id="2_5tcgs"]
+[ext_resource type="PackedScene" uid="uid://d4eh4jbb5u3xg" path="res://Singletons/Generator_Silver/upgrade_02/silver_upgrade_02.tscn" id="3_p6cuv"]
+
+[node name="Generator_Silver" type="Node"]
+script = ExtResource("1_4msdt")
+
+[node name="Upgrade_01" parent="." instance=ExtResource("2_5tcgs")]
+
+[node name="upgrade_02" parent="." instance=ExtResource("3_p6cuv")]
+
+[node name="Timer" type="Timer" parent="."]

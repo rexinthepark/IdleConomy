@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv1pgwdfwn8te"]
+
+[ext_resource type="Script" path="res://Singletons/Generator_Silver/upgrade_01/silver_upgrade_01.gd" id="1_2km8x"]
+
+[node name="silver_upgrade_02" type="Node"]
+script = ExtResource("1_2km8x")

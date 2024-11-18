@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://7uyhv6cgi1aw"]
+
+[ext_resource type="PackedScene" uid="uid://bnu01bo2ixpe0" path="res://scenes/views/quests/tuto_quest_01/tuto_quest_01_ui.tscn" id="1_ojrxp"]
+[ext_resource type="PackedScene" uid="uid://cqcwal3bovt17" path="res://scenes/views/quests/basequest/basequest_ui.tscn" id="2_7nrex"]
+[ext_resource type="Script" path="res://scenes/views/quests/basequest/basequest_ui.gd" id="3_ycoyg"]
+[ext_resource type="PackedScene" uid="uid://df5e4v4hp1j5d" path="res://scenes/views/quests/quest01/quest_01_ui.tscn" id="4_pvxji"]
+[ext_resource type="PackedScene" uid="uid://dg71ur7it8f0g" path="res://scenes/views/quests/quest02/quest_02_ui.tscn" id="5_32lja"]
+
+[node name="Quests" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Quests"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="TutoQuest01" parent="VBoxContainer/PanelContainer2/VBoxContainer" instance=ExtResource("1_ojrxp")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="BaseQuest" parent="VBoxContainer/PanelContainer2/VBoxContainer" instance=ExtResource("2_7nrex")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 1
+script = ExtResource("3_ycoyg")
+
+[node name="Quest01" parent="VBoxContainer/PanelContainer2/VBoxContainer" instance=ExtResource("4_pvxji")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Quest02" parent="VBoxContainer/PanelContainer2/VBoxContainer" instance=ExtResource("5_32lja")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1

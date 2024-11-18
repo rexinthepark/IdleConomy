@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://e25hxoppbtic"]
+
+[ext_resource type="PackedScene" uid="uid://sw2dow8waobu" path="res://Singletons/manager_silver/manager_silver.tscn" id="1_girxv"]
+[ext_resource type="PackedScene" uid="uid://df80n5nonft43" path="res://Singletons/Generator_Silver/Generator_Silver.tscn" id="2_t2up0"]
+[ext_resource type="PackedScene" uid="uid://dv1pgwdfwn8te" path="res://Singletons/Generator_Silver/upgrade_01/upgrade_01.tscn" id="3_pbqri"]
+[ext_resource type="PackedScene" uid="uid://csvv0n3tlhp7w" path="res://scenes/user_interface/user_interface.tscn" id="3_q7teu"]
+[ext_resource type="PackedScene" uid="uid://d4eh4jbb5u3xg" path="res://Singletons/Generator_Silver/upgrade_02/upgrade_02.tscn" id="4_iit5e"]
+
+[node name="Game" type="Node"]
+
+[node name="Singletons" type="Node" parent="."]
+
+[node name="ManagerSilver" parent="Singletons" instance=ExtResource("1_girxv")]
+
+[node name="GeneratorSilver" parent="Singletons" instance=ExtResource("2_t2up0")]
+
+[node name="Upgrade_01" parent="Singletons/GeneratorSilver" instance=ExtResource("3_pbqri")]
+
+[node name="Upgrade_02" parent="Singletons/GeneratorSilver" instance=ExtResource("4_iit5e")]
+
+[node name="UserInterface" parent="." instance=ExtResource("3_q7teu")]
+unique_name_in_owner = true

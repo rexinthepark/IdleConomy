@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bauy44dqgumq5"]
+
+[ext_resource type="Script" path="res://components/menu_options/button_save.gd" id="1_n5gpo"]
+[ext_resource type="Script" path="res://components/menu_options/button_load.gd" id="2_dekva"]
+[ext_resource type="Script" path="res://components/menu_options/button_clear.gd" id="3_slnpl"]
+
+[node name="MenuOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1360.0
+offset_bottom = -800.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 7
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="ButtonSave" type="Button" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+disabled = true
+text = "Save"
+script = ExtResource("1_n5gpo")
+
+[node name="ButtonLoad" type="Button" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+disabled = true
+text = "Load"
+autowrap_mode = 2
+script = ExtResource("2_dekva")
+
+[node name="ButtonClear" type="Button" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+disabled = true
+text = "Clear"
+script = ExtResource("3_slnpl")
+
+[node name="Button4" type="Button" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2

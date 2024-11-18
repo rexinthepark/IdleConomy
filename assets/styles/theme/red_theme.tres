@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bymuksni7enw3"]
+
+[ext_resource type="StyleBox" uid="uid://djxdyjtisckb4" path="res://assets/styles/style_box_flat/invisible.tres" id="1_8r3wk"]
+[ext_resource type="StyleBox" uid="uid://b7o8h8qshexe2" path="res://assets/styles/style_box_flat/red_panel.tres" id="2_5fgjg"]
+
+[resource]
+Button/styles/focus = ExtResource("1_8r3wk")
+Panel/styles/panel = ExtResource("2_5fgjg")

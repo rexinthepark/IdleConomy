@@ -1,0 +1,146 @@
+[gd_scene load_steps=11 format=3 uid="uid://usqp1wthk1n1"]
+
+[ext_resource type="Texture2D" uid="uid://detrdnaohwmx4" path="res://assets/icons/IconLogs.png" id="1_07q8y"]
+[ext_resource type="Script" path="res://scenes/views/village/generators/generator_logs.gd" id="1_gbsyx"]
+[ext_resource type="Script" path="res://scenes/views/village/icon_logs.gd" id="2_wto57"]
+[ext_resource type="Texture2D" uid="uid://d3s6842pty8vf" path="res://assets/icons/progress-bar-circle.png" id="3_ack6a"]
+[ext_resource type="Script" path="res://scenes/views/village/icon_logs_progress_bar.gd" id="4_few0k"]
+[ext_resource type="PackedScene" uid="uid://bofeqkjxlkvu4" path="res://components/button_generator_toggle/generator_silver_toggle_button.tscn" id="5_8odun"]
+[ext_resource type="Script" path="res://components/button_generator_toggle/generator_logs_toggle_button.gd" id="6_qu7ox"]
+[ext_resource type="Script" path="res://scenes/views/village/upgrade_logs_visibility_toggle_button.gd" id="7_rsjuh"]
+[ext_resource type="Script" path="res://scenes/views/village/generator_logs_upgrade_01.gd" id="8_i0ftf"]
+[ext_resource type="Script" path="res://scenes/views/village/generator_logs_upgrade_02.gd" id="9_o2bbr"]
+
+[node name="GeneratorLogs" type="HBoxContainer"]
+size_flags_vertical = 3
+script = ExtResource("1_gbsyx")
+
+[node name="VBoxLogs" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxLogsGenerator" type="VBoxContainer" parent="VBoxLogs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxLogs/VBoxLogsGenerator"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Lumbering Camp
+"
+
+[node name="Description" type="Label" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "A lumbering camp. There is all the equipment needed to cut down some trees."
+
+[node name="IconLogs" type="TextureRect" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_07q8y")
+expand_mode = 2
+script = ExtResource("2_wto57")
+
+[node name="IconLogsProgressBar" type="TextureProgressBar" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer/IconLogs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 7.5
+offset_right = 53.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+value = 1.0
+fill_mode = 4
+texture_under = ExtResource("3_ack6a")
+texture_progress = ExtResource("3_ack6a")
+tint_under = Color(0.113725, 0.113725, 0.113725, 0.521569)
+tint_progress = Color(0, 1, 0, 1)
+script = ExtResource("4_few0k")
+
+[node name="GeneratorLogsToggleButton" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer" instance=ExtResource("5_8odun")]
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+script = ExtResource("6_qu7ox")
+
+[node name="LogsUpgradeVisibilityToggleButton" type="Button" parent="VBoxLogs/VBoxLogsGenerator/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "+"
+script = ExtResource("7_rsjuh")
+
+[node name="HBoxLogsUpgrades" type="HBoxContainer" parent="VBoxLogs"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Upgrade01" type="HBoxContainer" parent="VBoxLogs/HBoxLogsUpgrades"]
+layout_mode = 2
+script = ExtResource("8_i0ftf")
+
+[node name="Description" type="VBoxContainer" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade01"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade01/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Upgrade 01
+"
+
+[node name="Description" type="Label" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade01/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Here is some space to describe what the upgrade is doing."
+
+[node name="Button" type="Button" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade01"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Upgrade02" type="HBoxContainer" parent="VBoxLogs/HBoxLogsUpgrades"]
+layout_mode = 2
+script = ExtResource("9_o2bbr")
+
+[node name="Description" type="VBoxContainer" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade02"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade02/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Upgrade 02
+"
+
+[node name="Description" type="Label" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade02/Description"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Here is some space to describe what the upgrade is doing."
+
+[node name="Button2" type="Button" parent="VBoxLogs/HBoxLogsUpgrades/Upgrade02"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0

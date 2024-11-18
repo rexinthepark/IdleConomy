@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://xeqfxqxuk852"]
+
+[ext_resource type="Script" path="res://Singletons/manager_quest/manager_quest.gd" id="1_mnr35"]
+[ext_resource type="PackedScene" uid="uid://b32o6cjo6lync" path="res://Singletons/manager_quest/tuto_quests/tuto_quest_01/tuto_quest_01.tscn" id="2_ayi3r"]
+[ext_resource type="PackedScene" uid="uid://ddq75xscunahx" path="res://Singletons/manager_quest/quests/base_quest.tscn" id="3_3db1u"]
+[ext_resource type="PackedScene" uid="uid://c2spdl7mwkkfo" path="res://Singletons/manager_quest/quests/quest_01/quest_01.tscn" id="4_uh1oa"]
+[ext_resource type="PackedScene" uid="uid://c5i2p46037hhh" path="res://Singletons/manager_quest/quests/quest_02/quest_02.tscn" id="5_ge6mn"]
+
+[node name="ManagerQuest" type="Node"]
+script = ExtResource("1_mnr35")
+
+[node name="TutoQuest01" parent="." instance=ExtResource("2_ayi3r")]
+
+[node name="BaseQuest" parent="." instance=ExtResource("3_3db1u")]
+
+[node name="Quest01" parent="." instance=ExtResource("4_uh1oa")]
+
+[node name="Quest02" parent="." instance=ExtResource("5_ge6mn")]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://brw5vpu5uvslf"]
+
+[ext_resource type="Script" path="res://Singletons/generator_logs/upgrade_02/logs_upgrade_02.gd" id="1_5g27x"]
+
+[node name="LogsUpgrade02" type="Node"]
+script = ExtResource("1_5g27x")
