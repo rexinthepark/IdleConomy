@@ -14,11 +14,11 @@ script = ExtResource("1_dtrnh")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+[node name="TitleBar" type="PanelContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/PanelContainer"]
+[node name="Title" type="Label" parent="VBoxContainer/TitleBar"]
 layout_mode = 2
 text = "Market"
 horizontal_alignment = 1
@@ -33,93 +33,93 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
+[node name="SilverToLogs" type="MarginContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/SilverToLogs"]
 layout_mode = 2
 
-[node name="Label_Title" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label_Title" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/SilverToLogs/VBoxContainer"]
 layout_mode = 2
 text = "Trade Silver for Logs"
 horizontal_alignment = 1
 
-[node name="SpinBox_AmountSilver" type="SpinBox" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="SpinBox_AmountSilver" type="SpinBox" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/SilverToLogs/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 max_value = 10000.0
 step = 100.0
 
-[node name="Label_ExchangeRateLogs" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label_ExchangeRateLogs" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/SilverToLogs/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Exchange Rate: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label_ReceiveLogs" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label_ReceiveLogs" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/SilverToLogs/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Receive in Logs:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TradeSilverForLogsButton" type="Button" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="TradeSilverForLogsButton" type="Button" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/SilverToLogs/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Trade"
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
+[node name="LogsToSilver" type="MarginContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/LogsToSilver"]
 layout_mode = 2
 
-[node name="Label_Title" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="Label_Title" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/LogsToSilver/VBoxContainer"]
 layout_mode = 2
 text = "Trade Logs for Silver"
 horizontal_alignment = 1
 
-[node name="SpinBox_AmountLogs" type="SpinBox" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="SpinBox_AmountLogs" type="SpinBox" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/LogsToSilver/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 max_value = 10000.0
 
-[node name="Label_ExchangeRateSilver" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="Label_ExchangeRateSilver" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/LogsToSilver/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Exchange Rate: "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label_ReceiveSilver" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="Label_ReceiveSilver" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/LogsToSilver/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Receive in Silver:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TradeLogsForSilverButton" type="Button" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="TradeLogsForSilverButton" type="Button" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/LogsToSilver/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Trade"
 
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
+[node name="FutureContent" type="MarginContainer" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/MarginContainer3"]
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer2/VBoxContainer/HBoxContainer/FutureContent"]
 layout_mode = 2
 text = "Future Content"
 horizontal_alignment = 1

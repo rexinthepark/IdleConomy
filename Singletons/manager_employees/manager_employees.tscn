@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfybio531c1mw"]
+
+[ext_resource type="Script" path="res://Singletons/manager_employees/manager_employees.gd" id="1_ou5wy"]
+
+[node name="ManagerEmployees" type="Node"]
+script = ExtResource("1_ou5wy")

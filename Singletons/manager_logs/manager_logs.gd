@@ -7,12 +7,12 @@ func _init() -> void :
 	if not ref : ref = self
 	else : queue_free()
 
-
+# Signals
 signal logs_updated
 signal logs_created(quantity : int)
 signal logs_spent(quantity : int)
 
-#var _logs : int = 0
+# Load saved data
 @onready var data: Data = Game.ref.data
 
 
